@@ -70,7 +70,6 @@
     buildNeuralBrain();
     buildAgentNodes();
     buildVectorCloud();
-    buildHolographicAvatar();
 
     // Event Listeners
     window.addEventListener('resize', onWindowResize, false);
@@ -78,38 +77,6 @@
 
     setupModeButtons();
     animate();
-  }
-
-  // Floating 3D Holographic Portrait Disc
-  let avatarMesh, avatarRing;
-  function buildHolographicAvatar() {
-    const textureLoader = new THREE.TextureLoader();
-    textureLoader.load('assets/dhairya.jpg', (texture) => {
-      // Circular avatar geometry
-      const avatarGeo = new THREE.CircleGeometry(16, 64);
-      const avatarMat = new THREE.MeshBasicMaterial({
-        map: texture,
-        side: THREE.DoubleSide,
-        transparent: true,
-        opacity: 0.88,
-      });
-      avatarMesh = new THREE.Mesh(avatarGeo, avatarMat);
-      avatarMesh.position.set(0, 0, -2);
-      neuralGroup.add(avatarMesh);
-
-      // Cybernetic Glowing Border Ring
-      const ringGeo = new THREE.RingGeometry(16.2, 17.2, 64);
-      const ringMat = new THREE.MeshBasicMaterial({
-        color: 0x00f2fe,
-        side: THREE.DoubleSide,
-        transparent: true,
-        opacity: 0.75,
-        blending: THREE.AdditiveBlending
-      });
-      avatarRing = new THREE.Mesh(ringGeo, ringMat);
-      avatarRing.position.set(0, 0, -1.8);
-      neuralGroup.add(avatarRing);
-    });
   }
 
   // 1. Neural Brain Visualization
@@ -335,14 +302,6 @@
       coreMesh.rotation.y = elapsedTime * 0.3;
       const scale = 1 + Math.sin(elapsedTime * 2) * 0.05;
       coreMesh.scale.set(scale, scale, scale);
-    }
-
-    if (avatarMesh && avatarRing) {
-      const floatY = Math.sin(elapsedTime * 1.5) * 2;
-      avatarMesh.position.y = floatY;
-      avatarRing.position.y = floatY;
-      avatarMesh.rotation.z = Math.sin(elapsedTime * 0.5) * 0.03;
-      avatarRing.rotation.z = -elapsedTime * 0.4;
     }
 
     if (outerParticles) {
