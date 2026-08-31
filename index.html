@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhairya Mishra | AI & Generative AI Engineer</title>
+  
+  <!-- SEO & OpenGraph Meta Tags for LinkedIn & Social Sharing -->
+  <meta name="title" content="Dhairya Mishra | AI Engineer & Generative AI Specialist">
+  <meta name="description" content="Portfolio of Dhairya Mishra - AI Engineer specializing in Generative AI, LLMs, LangGraph Multi-Agent Systems, RAG Architectures, Vector Retrieval, and AI Full-Stack Engineering.">
+  <meta name="keywords" content="Dhairya Mishra, AI Engineer, Generative AI, LangGraph, LangChain, Multi-Agent Systems, RAG, Qdrant, PyTorch, Full Stack AI, Machine Learning, Computer Vision">
+  <meta name="author" content="Dhairya Mishra">
+  
+  <!-- Open Graph / LinkedIn / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dhairya Mishra | AI & Generative AI Engineer Portfolio">
+  <meta property="og:description" content="AI Engineer building next-gen Generative AI, LangGraph Multi-Agent Workflows, RAG, and scalable intelligent automation platforms.">
+  <meta property="og:url" content="https://linkedin.com/in/dhairya-mishra-">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts: Space Grotesk, Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Three.js & OrbitControls for 3D Visuals -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  
+  <!-- Canvas Confetti for Celebration effects -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient Audio & Sound FX Toggle -->
+  <div class="audio-hud" id="audioHud" title="Toggle Interactive Sound Effects">
+    <button id="soundToggleBtn" class="hud-btn" aria-label="Toggle Audio Effects">
+      <i data-lucide="volume-2" id="soundIcon"></i>
+      <span class="hud-text">Audio FX: ON</span>
+    </button>
+  </div>
+
+  <!-- Background 3D Canvas Container -->
+  <div id="canvas3d-container"></div>
+  
+  <!-- Ambient Glow Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Main Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">DHAIRYA</span>
+        <span class="logo-dot">.AI</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="#about" class="nav-link"><i data-lucide="user"></i> About</a>
+        <a href="#agent-lab" class="nav-link"><i data-lucide="cpu"></i> Agent Lab</a>
+        <a href="#projects" class="nav-link"><i data-lucide="folder-git-2"></i> Projects</a>
+        <a href="#skills" class="nav-link"><i data-lucide="layers"></i> Skills</a>
+        <a href="#experience" class="nav-link"><i data-lucide="briefcase"></i> Experience</a>
+        <a href="#research" class="nav-link"><i data-lucide="book-open"></i> Research</a>
+        <a href="#terminal-section" class="nav-link"><i data-lucide="terminal"></i> Terminal</a>
+        <a href="#contact" class="nav-link nav-link-cta"><i data-lucide="send"></i> Let's Connect</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="resume-btn" id="viewResumeBtn" title="View Quick Resume">
+          <i data-lucide="file-text"></i>
+          <span>Resume</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="pulsing-dot"></span>
+          <span>Available for AI Engineer & GenAI Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Architecting <span class="gradient-text">Agentic AI</span> & Next-Gen <span class="gradient-text-alt">LLM Systems</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I'm <strong>Dhairya Mishra</strong> — an AI Engineer & Generative AI Specialist building 
+          autonomous multi-agent workflows with <strong>LangGraph</strong>, production-grade <strong>RAG</strong> architectures, 
+          and scalable full-stack intelligent automation.
+        </p>
+
+        <!-- Quick Metrics Grid -->
+        <div class="hero-metrics">
+          <div class="metric-card glass-panel">
+            <span class="metric-num">3+</span>
+            <span class="metric-label">Production AI Platforms</span>
+          </div>
+          <div class="metric-card glass-panel">
+            <span class="metric-num">68+</span>
+            <span class="metric-label">Vector Knowledge Chunks</span>
+          </div>
+          <div class="metric-card glass-panel">
+            <span class="metric-num">8.37</span>
+            <span class="metric-label">B.Tech CGPA (AI & DS)</span>
+          </div>
+          <div class="metric-card glass-panel">
+            <span class="metric-num">4-Node</span>
+            <span class="metric-label">Agentic Architecture</span>
+          </div>
+        </div>
+
+        <!-- Hero CTAs -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="sparkles"></i>
+            <span>Explore AI Work</span>
+          </a>
+          <a href="#agent-lab" class="btn btn-secondary">
+            <i data-lucide="play-circle"></i>
+            <span>Run Agent Simulation</span>
+          </a>
+          <a href="https://linkedin.com/in/dhairya-mishra-" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+            <i data-lucide="linkedin"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/dhairyamishra2003" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+            <i data-lucide="github"></i>
+            <span>GitHub Repos</span>
+          </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-hint">
+          <span>Interact with 3D Core • Scroll Down</span>
+          <i data-lucide="chevron-down" class="bounce-icon"></i>
+        </div>
+      </div>
+
+      <!-- 3D Scene Controls Overlay -->
+      <div class="scene-controls glass-panel">
+        <div class="control-badge"><i data-lucide="orbit"></i> 3D Interactive AI Core</div>
+        <div class="control-hints">
+          <span><i data-lucide="mouse-pointer"></i> Drag to rotate</span>
+          <span><i data-lucide="zoom-in"></i> Scroll to zoom</span>
+        </div>
+        <div class="scene-modes">
+          <button class="scene-mode-btn active" data-mode="neural">Neural Brain</button>
+          <button class="scene-mode-btn" data-mode="agentic">Multi-Agent Nodes</button>
+          <button class="scene-mode-btn" data-mode="vector">Vector Chunks</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & SUMMARY SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="user-check"></i> Summary & Background</span>
+          <h2 class="section-title">Engineering at the Frontier of <span class="gradient-text">Autonomous Intelligence</span></h2>
+          <p class="section-desc">Transforming complex AI research and Large Language Models into resilient, enterprise-ready software platforms.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel main-summary">
+            <div class="about-icon"><i data-lucide="brain-circuit"></i></div>
+            <h3>Who I Am</h3>
+            <p>
+              I am an AI Engineer with hands-on expertise building Generative AI, LLM, RAG, multi-agent, and machine learning systems. 
+              With an in-depth mastery of Python, LangChain, LangGraph, vector retrieval, and model evaluation alongside full-stack engineering (React, Next.js 15, Node.js, Express.js, Redis), 
+              I design systems that think, plan, validate, and execute autonomously.
+            </p>
+            <p>
+              From architecting intelligent candidate recruitment platforms to engineering fault-tolerant agent execution engines and CNN computer vision workflows during my ML internship at <strong>FODRIX</strong>, I bridge deep AI theory with high-performance production code.
+            </p>
+
+            <div class="highlight-tags">
+              <span class="tag"><i data-lucide="check-circle-2"></i> LangGraph Multi-Agents</span>
+              <span class="tag"><i data-lucide="check-circle-2"></i> Production RAG & Vector Retrieval</span>
+              <span class="tag"><i data-lucide="check-circle-2"></i> Full-Stack AI Architecture</span>
+              <span class="tag"><i data-lucide="check-circle-2"></i> Computer Vision & CNNs</span>
+            </div>
+          </div>
+
+          <div class="about-card glass-panel stats-card">
+            <h3>Quick Profile</h3>
+            <ul class="profile-list">
+              <li>
+                <span class="list-label"><i data-lucide="mail"></i> Email</span>
+                <span class="list-value">
+                  <a href="mailto:dhairyam698@gmail.com" class="interactive-link">dhairyam698@gmail.com</a>
+                  <button class="copy-mini-btn" data-copy="dhairyam698@gmail.com" title="Copy Email"><i data-lucide="copy"></i></button>
+                </span>
+              </li>
+              <li>
+                <span class="list-label"><i data-lucide="phone"></i> Phone</span>
+                <span class="list-value">
+                  <a href="tel:+916264516970" class="interactive-link">+91 6264516970</a>
+                  <button class="copy-mini-btn" data-copy="+916264516970" title="Copy Phone"><i data-lucide="copy"></i></button>
+                </span>
+              </li>
+              <li>
+                <span class="list-label"><i data-lucide="map-pin"></i> Location</span>
+                <span class="list-value">Satna, Madhya Pradesh, India</span>
+              </li>
+              <li>
+                <span class="list-label"><i data-lucide="graduation-cap"></i> Degree</span>
+                <span class="list-value">B.Tech AI & Data Science (2023–2027)</span>
+              </li>
+              <li>
+                <span class="list-label"><i data-lucide="award"></i> Academics</span>
+                <span class="list-value highlight-accent">CGPA: 8.37 / 10</span>
+              </li>
+              <li>
+                <span class="list-label"><i data-lucide="globe"></i> Specialization</span>
+                <span class="list-value">CCBP 4.0 Academy – NxtWave</span>
+              </li>
+            </ul>
+
+            <div class="profile-cta">
+              <a href="mailto:dhairyam698@gmail.com" class="btn btn-primary btn-block">
+                <i data-lucide="mail"></i> Send Fast Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE AGENT LAB / SIMULATOR -->
+    <section id="agent-lab" class="section lab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="play"></i> Live Interactive Demo</span>
+          <h2 class="section-title">LangGraph <span class="gradient-text">Multi-Agent Workflow</span> Simulator</h2>
+          <p class="section-desc">Experience my <strong>Planner-Executor-Validator-Recovery</strong> agentic architecture in action. Select a task or customize your own prompt to see how agents coordinate in real-time.</p>
+        </div>
+
+        <div class="agent-lab-wrapper glass-panel">
+          <!-- Simulator Control Panel -->
+          <div class="lab-controls">
+            <div class="preset-selector">
+              <label><i data-lucide="sliders"></i> Choose Sample Workflow:</label>
+              <div class="preset-buttons">
+                <button class="preset-btn active" data-preset="recruitment">Candidate Screening & Matching</button>
+                <button class="preset-btn" data-preset="resume">ATS Optimization & STAR Bullets</button>
+                <button class="preset-btn" data-preset="recovery">Fault Recovery & Resilient Retries</button>
+                <button class="preset-btn" data-preset="cv">CNN Image Quality Evaluation</button>
+              </div>
+            </div>
+
+            <div class="prompt-input-group">
+              <label for="agentGoalInput"><i data-lucide="terminal"></i> Agent Mission / User Goal:</label>
+              <div class="input-with-action">
+                <input type="text" id="agentGoalInput" value="Screen 45 AI engineer applicants, compute semantic score via Qdrant, extract STAR bullets, and schedule shortlisting" />
+                <button id="runAgentBtn" class="btn btn-primary">
+                  <i data-lucide="zap"></i>
+                  <span>Execute Workflow</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Multi-Agent Node Visualizer Graph -->
+          <div class="agent-graph-container">
+            <div class="agent-node" id="node-planner">
+              <div class="node-header">
+                <div class="node-icon"><i data-lucide="map"></i></div>
+                <span class="node-title">1. Planner Agent</span>
+              </div>
+              <p class="node-desc">Decomposes mission into autonomous sub-tasks & dependency graphs.</p>
+              <div class="node-status" data-state="idle">IDLE</div>
+            </div>
+
+            <div class="graph-connector connector-1"><i data-lucide="arrow-right"></i></div>
+
+            <div class="agent-node" id="node-executor">
+              <div class="node-header">
+                <div class="node-icon"><i data-lucide="cog"></i></div>
+                <span class="node-title">2. Executor Agent</span>
+              </div>
+              <p class="node-desc">Invokes tools, executes RAG vector retrieval & LangGraph tools.</p>
+              <div class="node-status" data-state="idle">IDLE</div>
+            </div>
+
+            <div class="graph-connector connector-2"><i data-lucide="arrow-right"></i></div>
+
+            <div class="agent-node" id="node-validator">
+              <div class="node-header">
+                <div class="node-icon"><i data-lucide="shield-check"></i></div>
+                <span class="node-title">3. Validator Agent</span>
+              </div>
+              <p class="node-desc">Verifies output quality, hallucination benchmarks, and score accuracy.</p>
+              <div class="node-status" data-state="idle">IDLE</div>
+            </div>
+
+            <div class="graph-connector connector-3"><i data-lucide="refresh-cw"></i></div>
+
+            <div class="agent-node" id="node-recovery">
+              <div class="node-header">
+                <div class="node-icon"><i data-lucide="activity"></i></div>
+                <span class="node-title">4. Recovery Agent</span>
+              </div>
+              <p class="node-desc">Handles BullMQ queue retry, fallback strategy & schema repair.</p>
+              <div class="node-status" data-state="idle">IDLE</div>
+            </div>
+          </div>
+
+          <!-- Live Output Stream & Execution Metrics -->
+          <div class="lab-terminal-output">
+            <div class="output-header">
+              <div class="output-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="output-title">LangGraph Agent Execution Logs</span>
+              <button class="clear-log-btn" id="clearLogBtn"><i data-lucide="trash-2"></i> Clear</button>
+            </div>
+            <pre class="terminal-body" id="agentConsoleOutput"><code>[SYSTEM] Multi-Agent Orchestrator initialized.
+[STATUS] Ready to execute LangGraph state machine. Click "Execute Workflow" above to run.</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="cpu"></i> Featured Engineering Work</span>
+          <h2 class="section-title">Production AI & <span class="gradient-text">Multi-Agent Systems</span></h2>
+          <p class="section-desc">Architected from scratch using Next.js 15, LangGraph, LangChain, Qdrant, React Flow, and Google Gemini API.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: AI Recruitment Organization -->
+          <div class="project-card glass-panel" data-project="recruitment">
+            <div class="project-banner">
+              <div class="banner-badge">Multi-Agent & RAG Platform</div>
+              <div class="banner-icon"><i data-lucide="users"></i></div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tech-stack">
+                <span>Next.js 15</span>
+                <span>LangGraph</span>
+                <span>LangChain</span>
+                <span>Qdrant</span>
+                <span>Groq API</span>
+                <span>React Flow</span>
+                <span>MongoDB</span>
+              </div>
+
+              <h3 class="project-title">AI Recruitment Organization — Multi-Agent Recruitment Platform</h3>
+              <p class="project-summary">
+                A scalable intelligent automation platform for autonomous candidate screening using multi-agent workflows, semantic search, and vector retrieval.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i data-lucide="check"></i> Specialized AI agents for resume parsing, candidate matching, shortlisting, interviewing, and email automation using LangGraph.</li>
+                <li><i data-lucide="check"></i> High-speed vector similarity screening with Qdrant vector database and Groq high-throughput inference.</li>
+                <li><i data-lucide="check"></i> Interactive recruiter dashboard featuring React Flow node visualizer, candidate analytics, and real-time execution monitoring.</li>
+                <li><i data-lucide="check"></i> Robust REST APIs and backend services for candidate processing and workflow orchestration.</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/dhairyamishra2003/AGENTICHIREAI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="github"></i> View GitHub Repo
+                </a>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-modal="recruitment">
+                  <i data-lucide="maximize-2"></i> Architecture Deep Dive
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: AgentFlow AI -->
+          <div class="project-card glass-panel" data-project="agentflow">
+            <div class="project-banner">
+              <div class="banner-badge">Autonomous Operations Platform</div>
+              <div class="banner-icon"><i data-lucide="git-branch"></i></div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tech-stack">
+                <span>React</span>
+                <span>React Flow</span>
+                <span>Node.js</span>
+                <span>PostgreSQL</span>
+                <span>Redis</span>
+                <span>BullMQ</span>
+                <span>Socket.IO</span>
+              </div>
+
+              <h3 class="project-title">AgentFlow AI — Agentic AI Operations Automation Platform</h3>
+              <p class="project-summary">
+                A scalable Agentic AI platform for intelligent workflow execution, real-time validation, automatic recovery, and live telemetry.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i data-lucide="check"></i> Engineered a Planner–Executor–Validator–Recovery multi-agent architecture with automated retries and fault tolerance.</li>
+                <li><i data-lucide="check"></i> Distributed task queues using Redis and BullMQ with automated exponential backoff and dead-letter recovery.</li>
+                <li><i data-lucide="check"></i> Real-time interactive workflow execution dashboard using React Flow and bidirectional Socket.IO streaming.</li>
+                <li><i data-lucide="check"></i> Production-ready REST APIs with JWT authentication and PostgreSQL/MongoDB persistent storage.</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/dhairyamishra2003/agentflow-ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="github"></i> View GitHub Repo
+                </a>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-modal="agentflow">
+                  <i data-lucide="maximize-2"></i> Architecture Deep Dive
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: AI-Powered Resume Builder -->
+          <div class="project-card glass-panel" data-project="resume-builder">
+            <div class="project-banner">
+              <div class="banner-badge">SDD, LLM & RAG System</div>
+              <div class="banner-icon"><i data-lucide="file-check-2"></i></div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tech-stack">
+                <span>React 19</span>
+                <span>Vite</span>
+                <span>Tailwind CSS</span>
+                <span>LangChain</span>
+                <span>LangGraph</span>
+                <span>Gemini API</span>
+                <span>MongoDB</span>
+              </div>
+
+              <h3 class="project-title">AI-Powered Resume Builder — Using SDD, LLM & RAG</h3>
+              <p class="project-summary">
+                Next-generation intelligent resume optimization engine with specialized agent tools, ATS scoring benchmarks, and 68-document RAG knowledge base.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i data-lucide="check"></i> LangGraph AI assistant with 5 specialized tools: resume updates, STAR bullet generation, ATS scoring, summary generation, and knowledge search.</li>
+                <li><i data-lucide="check"></i> Semantic vector retrieval using Gemini embeddings and cosine similarity across 68 curated hiring benchmark documents.</li>
+                <li><i data-lucide="check"></i> 6 specialized retrieval functions for ATS analysis, bullet generation, summary generation, resume review, and skill-gap analysis.</li>
+                <li><i data-lucide="check"></i> Full-stack integration with React 19, Vite, Express backend, and MongoDB storage.</li>
+              </ul>
+
+              <div class="project-links">
+                <a href="https://github.com/dhairyamishra2003" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="github"></i> View GitHub Profile
+                </a>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-modal="resume-builder">
+                  <i data-lucide="maximize-2"></i> Architecture Deep Dive
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: FODRIX ML Internship Project -->
+          <div class="project-card glass-panel" data-project="fodrix">
+            <div class="project-banner">
+              <div class="banner-badge">Computer Vision & Deep Learning</div>
+              <div class="banner-icon"><i data-lucide="eye"></i></div>
+            </div>
+            
+            <div class="project-content">
+              <div class="project-tech-stack">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>CNNs</span>
+                <span>Computer Vision</span>
+                <span>Model Evaluation</span>
+                <span>Scikit-Learn</span>
+              </div>
+
+              <h3 class="project-title">Automated Image Selection & Quality Assessment (FODRIX)</h3>
+              <p class="project-summary">
+                Production-grade deep learning CNN system for automated image selection, clarity evaluation, and automated quality scoring workflows.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i data-lucide="check"></i> Engineered CNN-based deep learning pipelines to evaluate image clarity, aesthetic quality, and artifact detection.</li>
+                <li><i data-lucide="check"></i> Developed and benchmarked automated image-quality assessment workflows for real-world high-throughput photo filtering.</li>
+                <li><i data-lucide="check"></i> Implemented robust model evaluation metrics, loss optimization, and feature engineering.</li>
+              </ul>
+
+              <div class="project-links">
+                <button class="btn btn-secondary btn-sm open-project-modal" data-modal="fodrix">
+                  <i data-lucide="maximize-2"></i> View CV Architecture
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="layers"></i> Technical Proficiency</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Technology Stack</span></h2>
+          <p class="section-desc">Extensive hands-on toolset spanning Deep Learning, Generative AI, Multi-Agent Architectures, Backend Systems, and MLOps.</p>
+        </div>
+
+        <!-- Filter category tabs -->
+        <div class="skills-filter-tabs">
+          <button class="filter-tab active" data-category="all">All Skills</button>
+          <button class="filter-tab" data-category="genai">Generative AI & Agents</button>
+          <button class="filter-tab" data-category="ml">Machine Learning & Deep Learning</button>
+          <button class="filter-tab" data-category="backend">Backend & Databases</button>
+          <button class="filter-tab" data-category="devops">MLOps & Tools</button>
+          <button class="filter-tab" data-category="languages">Languages & Core</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category: Generative AI & Agents -->
+          <div class="skill-category-card glass-panel" data-cat="genai">
+            <div class="skill-card-header">
+              <i data-lucide="sparkles" class="cat-icon genai-icon"></i>
+              <h3>Generative AI & Agentic Systems</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip highlight">LangGraph</span>
+              <span class="skill-chip highlight">LangChain</span>
+              <span class="skill-chip highlight">Multi-Agent Systems</span>
+              <span class="skill-chip highlight">RAG Architectures</span>
+              <span class="skill-chip">LLM Fine-Tuning / Prompting</span>
+              <span class="skill-chip">Google Gemini API</span>
+              <span class="skill-chip">Qdrant Vector DB</span>
+              <span class="skill-chip">Semantic Search</span>
+              <span class="skill-chip">Vector Embeddings</span>
+              <span class="skill-chip">Cosine Similarity</span>
+              <span class="skill-chip">Groq Cloud API</span>
+              <span class="skill-chip">Intelligent Automation</span>
+            </div>
+          </div>
+
+          <!-- Category: Machine Learning & Deep Learning -->
+          <div class="skill-category-card glass-panel" data-cat="ml">
+            <div class="skill-card-header">
+              <i data-lucide="brain" class="cat-icon ml-icon"></i>
+              <h3>Machine Learning & Deep Learning</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip highlight">PyTorch</span>
+              <span class="skill-chip highlight">Scikit-Learn</span>
+              <span class="skill-chip highlight">Computer Vision & CNNs</span>
+              <span class="skill-chip">Deep Neural Networks</span>
+              <span class="skill-chip">Supervised & Unsupervised Learning</span>
+              <span class="skill-chip">Regression & Classification</span>
+              <span class="skill-chip">Feature Engineering</span>
+              <span class="skill-chip">Model Evaluation & Metrics</span>
+              <span class="skill-chip">Natural Language Processing</span>
+              <span class="skill-chip">spaCy & NLTK</span>
+              <span class="skill-chip">Pandas & NumPy</span>
+              <span class="skill-chip">Exploratory Data Analysis (EDA)</span>
+            </div>
+          </div>
+
+          <!-- Category: Backend & Full Stack -->
+          <div class="skill-category-card glass-panel" data-cat="backend">
+            <div class="skill-card-header">
+              <i data-lucide="server" class="cat-icon backend-icon"></i>
+              <h3>Backend, APIs & Databases</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip highlight">Node.js & Express.js</span>
+              <span class="skill-chip highlight">React.js & Next.js 15</span>
+              <span class="skill-chip highlight">React Flow</span>
+              <span class="skill-chip">Flask (Python)</span>
+              <span class="skill-chip">RESTful API Design</span>
+              <span class="skill-chip">Redis & BullMQ</span>
+              <span class="skill-chip">Socket.IO (WebSockets)</span>
+              <span class="skill-chip">PostgreSQL</span>
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">SQLite</span>
+              <span class="skill-chip">JWT Authentication</span>
+            </div>
+          </div>
+
+          <!-- Category: MLOps & Developer Tools -->
+          <div class="skill-category-card glass-panel" data-cat="devops">
+            <div class="skill-card-header">
+              <i data-lucide="git-merge" class="cat-icon devops-icon"></i>
+              <h3>MLOps, Analytics & Developer Tools</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip highlight">Docker (Basic)</span>
+              <span class="skill-chip highlight">Kubernetes (Basic)</span>
+              <span class="skill-chip">CI/CD Pipelines</span>
+              <span class="skill-chip">System Design</span>
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Google Colab</span>
+              <span class="skill-chip">Jupyter Notebook</span>
+              <span class="skill-chip">Power BI</span>
+              <span class="skill-chip">Tableau</span>
+              <span class="skill-chip">Linux & Kali Linux</span>
+              <span class="skill-chip">Windows</span>
+            </div>
+          </div>
+
+          <!-- Category: Programming Languages -->
+          <div class="skill-category-card glass-panel" data-cat="languages">
+            <div class="skill-card-header">
+              <i data-lucide="code-2" class="cat-icon lang-icon"></i>
+              <h3>Core Programming Languages</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip highlight">Python (Expert AI)</span>
+              <span class="skill-chip highlight">JavaScript / TypeScript</span>
+              <span class="skill-chip">C++</span>
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">HTML5 & CSS3</span>
+              <span class="skill-chip">SQL</span>
+            </div>
+          </div>
+
+          <!-- Category: Soft Skills & Team -->
+          <div class="skill-category-card glass-panel" data-cat="all">
+            <div class="skill-card-header">
+              <i data-lucide="users" class="cat-icon soft-icon"></i>
+              <h3>Engineering Mindset & Soft Skills</h3>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip highlight">Problem Solving</span>
+              <span class="skill-chip highlight">Analytical Thinking</span>
+              <span class="skill-chip">Team Collaboration</span>
+              <span class="skill-chip">Technical Communication</span>
+              <span class="skill-chip">Rapid Prototyping</span>
+              <span class="skill-chip">Continuous Learner</span>
+              <span class="skill-chip">English & Hindi (Fluent)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE & RESEARCH -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="briefcase"></i> Track Record</span>
+          <h2 class="section-title">Experience & <span class="gradient-text">Independent Research</span></h2>
+          <p class="section-desc">Practical machine learning industry experience coupled with cutting-edge independent research in agentic collaboration.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience Item: FODRIX -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i data-lucide="briefcase"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-role">Machine Learning Intern</span>
+                  <h3 class="timeline-company">FODRIX</h3>
+                </div>
+                <span class="timeline-date">Jan 2026 – May 2026</span>
+              </div>
+              <p class="timeline-summary">
+                Applied deep learning and computer vision techniques to build production-grade automated image selection and quality assessment pipelines.
+              </p>
+              <ul class="timeline-bullets">
+                <li><i data-lucide="arrow-right-circle"></i> Engineered a Convolutional Neural Network (CNN) based deep learning system for automated image selection and quality assessment.</li>
+                <li><i data-lucide="arrow-right-circle"></i> Developed and evaluated end-to-end image-quality assessment workflows for a real-world computer vision problem.</li>
+                <li><i data-lucide="arrow-right-circle"></i> Applied Python, deep learning, loss optimization, and model evaluation techniques to image-quality workflows.</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>CNNs</span>
+                <span>Computer Vision</span>
+                <span>Model Evaluation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research Item -->
+          <div class="timeline-item" id="research">
+            <div class="timeline-marker research-marker">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-role research-badge">Independent Research</span>
+                  <h3 class="timeline-company">Multi-Agent Collaboration Systems Using Agentic AI for Intelligent Task Automation</h3>
+                </div>
+                <span class="timeline-date">Research Initiative</span>
+              </div>
+              <p class="timeline-summary">
+                Conducted deep architectural research into autonomous task decomposition, agent memory protocols, and coordination in multi-agent LLM systems.
+              </p>
+              <ul class="timeline-bullets">
+                <li><i data-lucide="arrow-right-circle"></i> Studied multi-agent collaboration architectures for intelligent task automation, autonomous task decomposition, and inter-agent communication.</li>
+                <li><i data-lucide="arrow-right-circle"></i> Analyzed planning, short/long-term memory, coordination, scalability, reliability, and security challenges in multi-agent AI systems.</li>
+                <li><i data-lucide="arrow-right-circle"></i> Proposed a scalable multi-agent architecture focused on LLM-driven agents, structured planning, workflow orchestration, and decision-making.</li>
+              </ul>
+              <div class="timeline-tech">
+                <span>Multi-Agent Systems</span>
+                <span>Autonomous Planning</span>
+                <span>LangGraph</span>
+                <span>Memory Architectures</span>
+                <span>Task Decomposition</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="graduation-cap"></i> Academics & Credentials</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-desc">Solid academic grounding in AI & Data Science complemented by intensive specialized technical credentials.</p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Education Column -->
+          <div class="edu-column">
+            <h3 class="column-title"><i data-lucide="school"></i> Academic Education</h3>
+            
+            <div class="edu-card glass-panel">
+              <div class="edu-badge">2023 – 2027</div>
+              <h4 class="edu-degree">Bachelor of Technology (B.Tech) – Artificial Intelligence & Data Science</h4>
+              <p class="edu-institution">AKS University, Satna, Madhya Pradesh</p>
+              <div class="edu-cgpa">
+                <span class="cgpa-pill"><i data-lucide="award"></i> CGPA: 8.37 / 10.0</span>
+              </div>
+            </div>
+
+            <div class="edu-card glass-panel">
+              <div class="edu-badge">Jun 2025 – Present</div>
+              <h4 class="edu-degree">CCBP 4.0 Academy – NxtWave</h4>
+              <p class="edu-institution">Artificial Intelligence, Software Development & Data Analytics</p>
+              <p class="edu-coursework">
+                <strong>Coursework:</strong> AI & Machine Learning (PyTorch, Feature Engineering, Model Evaluation) | Full-Stack Development (Python, MERN Stack, REST APIs) | Data Analytics & MLOps (Power BI, Tableau, Docker, Kubernetes, CI/CD).
+              </p>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div class="cert-column">
+            <h3 class="column-title"><i data-lucide="badge-check"></i> Industry Certifications</h3>
+            
+            <div class="certs-list">
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="workflow"></i></div>
+                <div class="cert-details">
+                  <h4>AI Workflows & Automation Workshop Using Make.com</h4>
+                  <p>CCBP 4.0 Academy, NxtWave • 2026</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="cpu"></i></div>
+                <div class="cert-details">
+                  <h4>MCP Mega Workshop Project</h4>
+                  <p>CCBP 4.0 Academy, NxtWave • 2025</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="bot"></i></div>
+                <div class="cert-details">
+                  <h4>LLMs & Agents</h4>
+                  <p>CCBP 4.0 Academy, NxtWave • 2025</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="sparkles"></i></div>
+                <div class="cert-details">
+                  <h4>Introduction to Generative AI</h4>
+                  <p>CCBP 4.0 Academy, NxtWave • 2025</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="database"></i></div>
+                <div class="cert-details">
+                  <h4>Introduction to Databases</h4>
+                  <p>CCBP 4.0 Academy, NxtWave • 2025</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="layout"></i></div>
+                <div class="cert-details">
+                  <h4>Build Your Own Dynamic Website</h4>
+                  <p>CCBP 4.0 Academy, NxtWave • 2025</p>
+                </div>
+              </div>
+
+              <div class="cert-item glass-panel">
+                <div class="cert-icon"><i data-lucide="book-marked"></i></div>
+                <div class="cert-details">
+                  <h4>Research Methodology</h4>
+                  <p>Udemy • Apr 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEVELOPER TERMINAL -->
+    <section id="terminal-section" class="section terminal-section-wrapper">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="terminal"></i> Developer CLI</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">AI Shell</span></h2>
+          <p class="section-desc">Test commands, query skills, inspect agent metrics, or download Dhairya's resume directly via CLI.</p>
+        </div>
+
+        <div class="terminal-container glass-panel">
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">dhairya@ai-cluster:~ (bash)</span>
+            <div class="terminal-actions">
+              <button id="termHelpBtn" class="term-action-btn"><i data-lucide="help-circle"></i> help</button>
+              <button id="termClearBtn" class="term-action-btn"><i data-lucide="trash-2"></i> clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-screen" id="terminalScreen">
+            <div class="term-line output-text">
+              Welcome to <strong>Dhairya Mishra's AI Terminal v2.4.0</strong> (x86_64-ai-cluster)
+            </div>
+            <div class="term-line output-text">
+              Type <span class="term-highlight">help</span> to view available commands or try <span class="term-highlight">skills</span>, <span class="term-highlight">projects</span>, <span class="term-highlight">contact</span>, <span class="term-highlight">resume</span>, <span class="term-highlight">sudo hire</span>.
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">dhairya@ai-cluster:~$</span>
+            <input type="text" id="terminalInput" class="term-input" placeholder="Type a command (e.g. help, skills, resume)..." autofocus autocomplete="off" />
+            <button id="termSubmitBtn" class="btn btn-primary btn-sm"><i data-lucide="corner-down-left"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONNECT SECTION (LINKEDIN OPTIMIZED) -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i data-lucide="send"></i> Let's Collaborate</span>
+          <h2 class="section-title">Ready to Build the <span class="gradient-text">Future of AI?</span></h2>
+          <p class="section-desc">Open for AI Engineer, Generative AI Specialist, and Full-Stack AI roles. Let's discuss high-impact opportunities.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Cards -->
+          <div class="contact-info-col">
+            <div class="contact-card glass-panel">
+              <div class="contact-icon"><i data-lucide="mail"></i></div>
+              <div class="contact-details">
+                <h4>Email Directly</h4>
+                <p>dhairyam698@gmail.com</p>
+                <div class="contact-btns">
+                  <a href="mailto:dhairyam698@gmail.com" class="btn btn-primary btn-sm">
+                    <i data-lucide="external-link"></i> Compose
+                  </a>
+                  <button class="btn btn-secondary btn-sm copy-btn" data-copy="dhairyam698@gmail.com">
+                    <i data-lucide="copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+              <div class="contact-details">
+                <h4>LinkedIn Network</h4>
+                <p>linkedin.com/in/dhairya-mishra-</p>
+                <div class="contact-btns">
+                  <a href="https://linkedin.com/in/dhairya-mishra-" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin btn-sm">
+                    <i data-lucide="linkedin"></i> Connect on LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon"><i data-lucide="github"></i></div>
+              <div class="contact-details">
+                <h4>GitHub Repositories</h4>
+                <p>github.com/dhairyamishra2003</p>
+                <div class="contact-btns">
+                  <a href="https://github.com/dhairyamishra2003" target="_blank" rel="noopener noreferrer" class="btn btn-github btn-sm">
+                    <i data-lucide="github"></i> Follow on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-icon"><i data-lucide="phone"></i></div>
+              <div class="contact-details">
+                <h4>Direct Phone / WhatsApp</h4>
+                <p>+91 6264516970</p>
+                <div class="contact-btns">
+                  <a href="tel:+916264516970" class="btn btn-secondary btn-sm">
+                    <i data-lucide="phone-call"></i> Call
+                  </a>
+                  <a href="https://wa.me/916264516970?text=Hi%20Dhairya,%20saw%20your%20AI%20Engineer%20portfolio!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    <i data-lucide="message-square"></i> WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Fast Message Form -->
+          <div class="contact-form-col glass-panel">
+            <h3><i data-lucide="message-circle"></i> Send a Direct Message</h3>
+            <p>Fill in this quick form to send an instant message or inquiry directly to my inbox.</p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="contactName">Your Name / Organization</label>
+                <input type="text" id="contactName" name="name" placeholder="e.g. Sarah Connor (Tech Recruiter / Founder)" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Your Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="sarah@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject / Role Opportunity</label>
+                <input type="text" id="contactSubject" name="subject" placeholder="AI Engineer Role / LangGraph Collaboration" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="4" placeholder="Hi Dhairya, we loved your multi-agent architecture and would like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
+                <i data-lucide="send"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          <span>&lt;DHAIRYA.AI /&gt;</span>
+        </a>
+        <p>Engineered by Dhairya Mishra • AI Engineer & Generative AI Specialist</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/dhairya-mishra-" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://github.com/dhairyamishra2003" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="mailto:dhairyam698@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="tel:+916264516970" aria-label="Phone"><i data-lucide="phone"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QUICK RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="file-text"></i>
+          <h3>Dhairya Mishra — Professional AI Resume</h3>
+        </div>
+        <button class="modal-close-btn" id="closeResumeModal"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body resume-modal-content">
+        <div class="resume-sheet">
+          <div class="resume-sheet-header">
+            <h2>DHAIRYA MISHRA</h2>
+            <div class="resume-tagline">AI Engineer | Generative AI Engineer | AI Full-Stack Engineer</div>
+            <div class="resume-contact-bar">
+              <span><i data-lucide="phone"></i> +91 6264516970</span>
+              <span><i data-lucide="mail"></i> dhairyam698@gmail.com</span>
+              <span><i data-lucide="linkedin"></i> linkedin.com/in/dhairya-mishra-</span>
+              <span><i data-lucide="github"></i> github.com/dhairyamishra2003</span>
+            </div>
+          </div>
+
+          <div class="resume-section-block">
+            <h4>PROFESSIONAL SUMMARY</h4>
+            <p>AI Engineer with hands-on experience building Generative AI, LLM, RAG, multi-agent, and machine learning systems. Experienced in Python, LangChain, LangGraph, AI Agents, semantic search, vector retrieval, Computer Vision, and model evaluation, with full-stack development using React, Node.js, Express.js, and REST APIs. Built AI applications for recruitment automation, resume intelligence, and real-time workflow orchestration, with practical experience developing CNN-based computer vision solutions during a Machine Learning internship.</p>
+          </div>
+
+          <div class="resume-section-block">
+            <h4>EDUCATION</h4>
+            <div class="resume-row">
+              <strong>B.Tech – Artificial Intelligence & Data Science</strong>
+              <span>2023 – 2027 | CGPA: 8.37</span>
+            </div>
+            <p>AKS University, Satna, Madhya Pradesh</p>
+
+            <div class="resume-row">
+              <strong>CCBP 4.0 Academy – NxtWave</strong>
+              <span>Jun 2025 – Present</span>
+            </div>
+            <p>AI & ML (PyTorch, Feature Engineering) | Full-Stack Development (Python, MERN, REST APIs) | Data Analytics & MLOps (Power BI, Tableau, Docker, Kubernetes, CI/CD)</p>
+          </div>
+
+          <div class="resume-section-block">
+            <h4>FEATURED PROJECTS</h4>
+            <div class="resume-item">
+              <strong>AI Recruitment Organization – Multi-Agent Platform</strong>
+              <p>Next.js 15, LangGraph, LangChain, Qdrant, Groq API, React Flow. Autonomous candidate screening, shortlisting, interviewing, and email automation.</p>
+            </div>
+            <div class="resume-item">
+              <strong>AgentFlow AI – Agentic Operations Automation</strong>
+              <p>React Flow, Node.js, PostgreSQL, Redis, BullMQ, Socket.IO. Planner-Executor-Validator-Recovery multi-agent architecture with automated retries.</p>
+            </div>
+            <div class="resume-item">
+              <strong>AI-Powered Resume Builder – SDD, LLM & RAG</strong>
+              <p>React 19, Vite, Tailwind CSS, LangGraph, Gemini API. 5 specialized tools, ATS scoring, and 68-doc vector RAG search.</p>
+            </div>
+          </div>
+
+          <div class="resume-section-block">
+            <h4>EXPERIENCE</h4>
+            <div class="resume-row">
+              <strong>Machine Learning Intern — FODRIX</strong>
+              <span>Jan 2026 – May 2026</span>
+            </div>
+            <p>Engineered CNN-based deep learning system for automated image selection, clarity evaluation, and automated quality assessment workflows.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="printResumeBtn"><i data-lucide="printer"></i> Print / Save as PDF</button>
+        <a href="mailto:dhairyam698@gmail.com?subject=Interview%20Invitation%20-%20AI%20Engineer" class="btn btn-primary"><i data-lucide="send"></i> Request Full PDF Copy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card glass-panel" id="projectModalCard">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="cpu" id="modalProjectIcon"></i>
+          <h3 id="modalProjectTitle">Project Architecture Breakdown</h3>
+        </div>
+        <button class="modal-close-btn" id="closeProjectModal"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body" id="modalProjectBody">
+        <!-- Injected dynamically via JavaScript -->
+      </div>
+      <div class="modal-footer" id="modalProjectFooter">
+        <a href="#" target="_blank" rel="noopener noreferrer" id="modalProjectGithub" class="btn btn-primary">
+          <i data-lucide="github"></i> View GitHub Repository
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <i data-lucide="check-circle-2" class="toast-icon"></i>
+    <span class="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/agent-simulator.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
