@@ -13,57 +13,86 @@
   const commands = {
     help: () => `
 <span class="term-highlight">AVAILABLE COMMANDS:</span>
+  • <span class="term-highlight">whoami</span>       - Display engineer identity
+  • <span class="term-highlight">role</span>         - Primary engineering specialization
+  • <span class="term-highlight">focus</span>        - Core technical focus areas
+  • <span class="term-highlight">stack</span>        - Quick technology stack overview
+  • <span class="term-highlight">about</span>        - Concise professional introduction
   • <span class="term-highlight">skills</span>       - List all technical skills & ML/AI frameworks
-  • <span class="term-highlight">projects</span>     - Display key AI projects with GitHub repositories
-  • <span class="term-highlight">experience</span>   - View industry experience & FODRIX internship details
-  • <span class="term-highlight">research</span>     - Read about Independent Multi-Agent Research
-  • <span class="term-highlight">education</span>    - Check academic credentials & CGPA
-  • <span class="term-highlight">certs</span>        - View certified technical training
+  • <span class="term-highlight">projects</span>     - Display verified AI systems with architecture & repos
+  • <span class="term-highlight">experience</span>   - View machine learning internship details
+  • <span class="term-highlight">research</span>     - Read about Independent Multi-Agent Research & Experiments
+  • <span class="term-highlight">education</span>    - Check academic degree & CGPA
+  • <span class="term-highlight">certs</span>        - View certified technical credentials
   • <span class="term-highlight">contact</span>      - Get email, phone, and LinkedIn coordinates
-  • <span class="term-highlight">resume</span>       - Open interactive high-res resume view
+  • <span class="term-highlight">resume</span>       - Open interactive resume viewer
   • <span class="term-highlight">sudo hire</span>    - Fast-track interview / hiring request
   • <span class="term-highlight">clear</span>        - Clear the terminal screen
 `,
+    whoami: () => `
+<span class="term-highlight">Dhairya Mishra</span>
+AI Engineer & Generative AI Specialist | Satna, MP, India
+`,
+    role: () => `
+<span class="term-highlight">AI Engineer / GenAI Developer</span>
+Specializing in LLMs, RAG systems, Multi-Agent Workflows (LangGraph), and Full-Stack AI.
+`,
+    focus: () => `
+<span class="term-highlight">LLMs • RAG • Agentic AI</span>
+Building production-ready autonomous workflows, vector similarity search, and scalable backend platforms.
+`,
+    stack: () => `
+<span class="term-highlight">Python • Java • React • FastAPI • Next.js 15 • LangGraph • Qdrant • PyTorch</span>
+`,
+    about: () => `
+<span class="term-highlight">ABOUT DHAIRYA:</span>
+AI Engineer with hands-on experience building Generative AI, LLM, RAG, multi-agent, and machine learning systems. Experienced in Python, LangChain, LangGraph, Qdrant vector retrieval, Computer Vision (CNNs), and full-stack development using React, Next.js, and FastAPI.
+`,
     skills: () => `
-<span class="term-highlight">[GENAI & AGENTS]:</span> LangGraph, LangChain, Multi-Agent Systems, RAG, Qdrant, Gemini API, Groq, Cosine Similarity
-<span class="term-highlight">[ML & DEEP LEARNING]:</span> PyTorch, Scikit-learn, CNNs, Computer Vision, Model Evaluation, NLP (spaCy, NLTK)
-<span class="term-highlight">[FULL-STACK & BACKEND]:</span> React.js, Next.js 15, Node.js, Express.js, Flask, Redis, BullMQ, Socket.IO, PostgreSQL, MongoDB
-<span class="term-highlight">[LANGUAGES]:</span> Python, JavaScript, TypeScript, C++, C, Java, HTML, CSS, SQL
-<span class="term-highlight">[TOOLS & DEVOPS]:</span> Docker, Kubernetes, CI/CD, Git, GitHub, Linux, Power BI, Tableau
+<span class="term-highlight">[AI / GENERATIVE AI]:</span> LLMs, RAG, Prompt Engineering, Agentic AI, LangGraph, LangChain, Vector Search, Embeddings, Qdrant, Cosine Similarity, PyTorch, CNNs
+<span class="term-highlight">[PROGRAMMING]:</span> Python, Java, JavaScript, TypeScript, C++, C, SQL
+<span class="term-highlight">[BACKEND]:</span> FastAPI, Node.js, Express.js, Flask, REST APIs, JWT Authentication, Redis, BullMQ, Socket.IO
+<span class="term-highlight">[FRONTEND]:</span> React, Next.js 15, HTML5, CSS3, Tailwind CSS, React Flow
+<span class="term-highlight">[DATA]:</span> SQL, PostgreSQL, MongoDB, Pandas, NumPy, Data Analytics
+<span class="term-highlight">[TOOLS / INFRASTRUCTURE]:</span> Git, GitHub, Docker, CI/CD, Cloud / Deployment, Linux
 `,
     projects: () => `
-<span class="term-highlight">1. AI Recruitment Organization (Multi-Agent Recruitment Platform)</span>
-   Tech: Next.js 15, LangGraph, Qdrant, Groq API, React Flow
+<span class="term-highlight">1. Multi-Agent Research & Recruitment System (AI Recruitment Organization)</span>
+   Stack: LangGraph, Python, FastAPI, React, PostgreSQL, Qdrant, Groq API
+   Architecture: Input ➔ Planner ➔ Researcher ➔ Critic ➔ Synthesizer
    Repo: <a href="https://github.com/dhairyamishra2003/AGENTICHIREAI" target="_blank" style="color:#00f2fe">github.com/dhairyamishra2003/AGENTICHIREAI</a>
 
 <span class="term-highlight">2. AgentFlow AI (Agentic AI Operations Automation Platform)</span>
-   Tech: React Flow, Node.js, PostgreSQL, Redis, BullMQ, Socket.IO
+   Stack: React Flow, Node.js, PostgreSQL, Redis, BullMQ, Socket.IO
+   Architecture: Task Queue ➔ Planner ➔ Executor ➔ Validator ➔ Auto-Recovery
    Repo: <a href="https://github.com/dhairyamishra2003/agentflow-ai" target="_blank" style="color:#00f2fe">github.com/dhairyamishra2003/agentflow-ai</a>
 
 <span class="term-highlight">3. AI-Powered Resume Builder (SDD, LLM & RAG)</span>
-   Tech: React 19, Vite, LangGraph, Gemini API, 68-doc Vector Search
+   Stack: React 19, Vite, Tailwind CSS, LangGraph, Gemini API, 68-Doc Vector RAG
+   Repo: <a href="https://github.com/dhairyamishra2003" target="_blank" style="color:#00f2fe">github.com/dhairyamishra2003</a>
 
-<span class="term-highlight">4. Automated Image Selection & Quality Assessment</span>
-   Tech: Python, PyTorch, CNNs, Computer Vision (FODRIX)
+<span class="term-highlight">4. Automated Image Selection & Quality Assessment (FODRIX)</span>
+   Stack: Python, PyTorch, CNNs, Computer Vision, Scikit-Learn
+   Repo: <a href="https://github.com/dhairyamishra2003" target="_blank" style="color:#00f2fe">github.com/dhairyamishra2003</a>
 `,
     experience: () => `
 <span class="term-highlight">[ROLE]:</span> Machine Learning Intern
 <span class="term-highlight">[COMPANY]:</span> FODRIX (Jan 2026 – May 2026)
-<span class="term-highlight">[DETAILS]:</span>
-  • Engineered a CNN-based deep learning system for automated image selection & quality assessment.
-  • Developed and evaluated computer vision workflows for real-world image scoring.
-  • Applied PyTorch, loss optimization, and feature engineering.
+<span class="term-highlight">[BULLETS]:</span>
+  • Engineered a Convolutional Neural Network (CNN) based deep learning pipeline using PyTorch to evaluate image clarity and aesthetic quality, reducing manual photo filtering time.
+  • Developed end-to-end computer vision workflows for automated photo quality scoring and blur artifact detection across high-resolution image batches.
+  • Applied Python, loss optimization, and model evaluation metrics (AUC-ROC, Confusion Matrix).
 `,
     research: () => `
 <span class="term-highlight">[TITLE]:</span> Multi-Agent Collaboration Systems Using Agentic AI for Intelligent Task Automation
-<span class="term-highlight">[TYPE]:</span> Independent Research
+<span class="term-highlight">[TYPE]:</span> Independent Research & Architectural Experiments
 <span class="term-highlight">[FOCUS]:</span> Autonomous task decomposition, agent memory protocols, fault-tolerant coordination, and decision-making pipelines.
 `,
     education: () => `
 <span class="term-highlight">[DEGREE]:</span> Bachelor of Technology (B.Tech) – Artificial Intelligence & Data Science
 <span class="term-highlight">[INSTITUTE]:</span> AKS University, Satna, Madhya Pradesh (2023–2027)
-<span class="term-highlight">[ACADEMIC STANDING]:</span> CGPA: 8.37 / 10.0
-<span class="term-highlight">[SPECIALIZATION]:</span> CCBP 4.0 Academy – NxtWave (AI, Software Dev & Data Analytics)
+<span class="term-highlight">[ACADEMICS]:</span> CGPA: 8.37 / 10.0
+<span class="term-highlight">[ACADEMY]:</span> CCBP 4.0 Academy – NxtWave (AI, Software Dev & Data Analytics)
 `,
     certs: () => `
 <span class="term-highlight">[CREDENTIALS]:</span>
@@ -71,6 +100,7 @@
   • MCP Mega Workshop Project (CCBP 4.0 Academy | 2025)
   • LLMs & Agents (CCBP 4.0 Academy | 2025)
   • Introduction to Generative AI (CCBP 4.0 Academy | 2025)
+  • Introduction to Databases (CCBP 4.0 Academy | 2025)
   • Research Methodology (Udemy | Apr 2026)
 `,
     contact: () => `
@@ -99,9 +129,9 @@
         window.PortfolioSound.playSuccess();
       }
       setTimeout(() => {
-        window.location.href = "mailto:dhairyam698@gmail.com?subject=Excited%20to%20Hire%20You%20as%20AI%20Engineer&body=Hi%20Dhairya,%20we%20reviewed%20your%20portfolio%20and%20would%20love%20to%20schedule%20an%20interview!";
+        window.location.href = "mailto:dhairyam698@gmail.com?subject=Excited%20to%20Connect%20for%20AI%20Engineer%20Role&body=Hi%20Dhairya,%20we%20reviewed%20your%20portfolio%20and%20would%20love%20to%20schedule%20a%20discussion!";
       }, 1000);
-      return `<span style="color:#10b981;font-weight:bold;">[AUTHENTICATED] Elevating privileges... Outstanding candidate match found! Redirecting to mailto client for interview schedule.</span>`;
+      return `<span style="color:#10b981;font-weight:bold;">[AUTHENTICATED] Elevating privileges... Outstanding candidate match found! Redirecting to mailto client.</span>`;
     },
     hire: () => commands["sudo hire"](),
     clear: () => {

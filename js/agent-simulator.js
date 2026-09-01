@@ -1,6 +1,7 @@
 /**
  * Multi-Agent Workflow Simulator (LangGraph / AgentFlow Engine)
  * Dhairya Mishra Portfolio
+ * Topology: User ➔ Planner Agent ➔ Research Agent ➔ Critic Agent ➔ Synthesizer
  */
 
 (function () {
@@ -8,36 +9,36 @@
 
   const presets = {
     recruitment: {
-      goal: "Screen 45 AI engineer applicants, compute semantic similarity via Qdrant, extract STAR bullets, and schedule shortlisting",
+      goal: "Screen 45 AI engineer applicants, compute semantic score via Qdrant, extract STAR bullets, and schedule shortlisting",
       steps: [
         {
           node: "node-planner",
           agent: "Planner Agent",
-          status: "Decomposing task: [Parse PDFs] -> [Vector Embedding] -> [Qdrant Top-K Query] -> [Automated Shortlist Matrix]",
-          log: "[PLANNER] Task decomposed into 4 sub-graphs. Initializing LangGraph state with candidate pool (N=45)."
+          status: "Decomposing task: [Parse PDFs] ➔ [Vector Embedding] ➔ [Qdrant Top-K Query] ➔ [Shortlist Matrix]",
+          log: "[PLANNER] Mission decomposed into 4 sub-graphs. Initializing LangGraph state with candidate pool (N=45)."
         },
         {
           node: "node-executor",
-          agent: "Executor Agent",
+          agent: "Research Agent",
           status: "Invoking Groq API inference & Qdrant vector retrieval...",
-          log: "[EXECUTOR] Vector cosine similarity computed. Identified 12 candidates with match score > 88%."
+          log: "[RESEARCHER] Dense vector cosine similarity computed. Retrieved 12 candidates matching job spec > 88%."
         },
         {
           node: "node-validator",
-          agent: "Validator Agent",
+          agent: "Critic Agent",
           status: "Validating ATS keyword density & experience threshold...",
-          log: "[VALIDATOR] Integrity check passed. Hallucination index: 0.002. Shortlist verified against Job Spec."
+          log: "[CRITIC] Integrity check passed. Factuality confidence: 99.8%. Shortlist verified against Job Spec."
         },
         {
           node: "node-recovery",
-          agent: "Recovery Agent",
-          status: "Queue monitoring active. 0 failed worker jobs in BullMQ.",
-          log: "[RECOVERY] All 45 candidate states committed to MongoDB. Dispatched 12 calendar invitations."
+          agent: "Synthesizer",
+          status: "Synthesizing interview schedule & committing states.",
+          log: "[SYNTHESIZER] Candidate evaluation matrix generated. Dispatched interview notifications & committed state."
         }
       ]
     },
     resume: {
-      goal: "Evaluate resume against 68-doc benchmark, score ATS metrics, generate 3 STAR bullets for LangGraph experience",
+      goal: "Evaluate resume against 68-chunk hiring benchmark, score ATS metrics, generate STAR bullets for LangGraph experience",
       steps: [
         {
           node: "node-planner",
@@ -47,21 +48,21 @@
         },
         {
           node: "node-executor",
-          agent: "Executor Agent",
+          agent: "Research Agent",
           status: "Executing Gemini embeddings vector search across 68 docs...",
-          log: "[EXECUTOR] Retrieved 6 high-density context documents. Synthesized STAR bullet: 'Architected LangGraph multi-agent system improving pipeline throughput by 42%'."
+          log: "[RESEARCHER] Retrieved top 6 benchmark documents. Synthesized STAR bullet: 'Architected LangGraph multi-agent system improving pipeline throughput by 42%'."
         },
         {
           node: "node-validator",
-          agent: "Validator Agent",
+          agent: "Critic Agent",
           status: "Running action-verb validation & quantifiable metric auditor...",
-          log: "[VALIDATOR] ATS Score upgraded from 74/100 to 96/100. STAR format compliance: 100%."
+          log: "[CRITIC] ATS Score upgraded from 74/100 to 96/100. STAR format compliance validated at 100%."
         },
         {
           node: "node-recovery",
-          agent: "Recovery Agent",
+          agent: "Synthesizer",
           status: "State verified & exported.",
-          log: "[RECOVERY] JSON schema validated. Generated PDF export buffer ready for download."
+          log: "[SYNTHESIZER] Output schema validated. Produced formatted resume updates and exported JSON payload."
         }
       ]
     },
@@ -76,21 +77,21 @@
         },
         {
           node: "node-executor",
-          agent: "Executor Agent",
-          status: "Encountered 429 Rate Limit from upstream LLM provider...",
-          log: "[EXECUTOR] Warning: Rate limit on batch 4/10. Emitting error state to LangGraph router."
-        },
-        {
-          node: "node-recovery",
-          agent: "Recovery Agent",
-          status: "Intercepting error event! Executing exponential backoff retry...",
-          log: "[RECOVERY] Intercepted BullMQ failed job. Applying jittered backoff (t=1200ms) + switching to fallback Groq endpoint."
+          agent: "Research Agent",
+          status: "Encountered 429 Rate Limit on primary LLM endpoint...",
+          log: "[RESEARCHER] Warning: Rate limit on batch 4/10. Emitting error signal to LangGraph router."
         },
         {
           node: "node-validator",
-          agent: "Validator Agent",
-          status: "Validating re-indexed vector payload...",
-          log: "[VALIDATOR] All 100 batch tasks successfully completed with zero data loss. Self-healing achieved."
+          agent: "Critic Agent",
+          status: "Intercepting failure event! Evaluating fallback route...",
+          log: "[CRITIC] Intercepted BullMQ failed job. Switching to fallback Groq inference endpoint with jittered backoff."
+        },
+        {
+          node: "node-recovery",
+          agent: "Synthesizer",
+          status: "Re-indexed vector payload verified.",
+          log: "[SYNTHESIZER] All 100 batch tasks successfully completed with zero data loss. Self-healing achieved."
         }
       ]
     },
@@ -101,25 +102,25 @@
           node: "node-planner",
           agent: "Planner Agent",
           status: "Setting up PyTorch DataLoader and image preprocessing transforms...",
-          log: "[PLANNER] Loading high-resolution image batch (N=200). Normalizing tensor tensors [C x H x W]."
+          log: "[PLANNER] Loading high-resolution image batch (N=200). Normalizing tensor batches [C x H x W]."
         },
         {
           node: "node-executor",
-          agent: "Executor Agent",
+          agent: "Research Agent",
           status: "Passing images through CNN feature extraction layers...",
-          log: "[EXECUTOR] Forward pass executed on GPU. Extracted clarity, sharpness, and aesthetic feature maps."
+          log: "[RESEARCHER] Forward pass executed. Extracted clarity, sharpness, and aesthetic feature maps."
         },
         {
           node: "node-validator",
-          agent: "Validator Agent",
+          agent: "Critic Agent",
           status: "Computing confusion matrix, AUC-ROC, and quality thresholds...",
-          log: "[VALIDATOR] Model confidence: 94.6%. Filtered out 38 sub-quality blurry frames automatically."
+          log: "[CRITIC] Model confidence: 94.6%. Filtered out 38 sub-quality blurry frames automatically."
         },
         {
           node: "node-recovery",
-          agent: "Recovery Agent",
-          status: "Batch processing finished.",
-          log: "[RECOVERY] FODRIX CV Pipeline complete. Exported high-quality image dataset & metadata."
+          agent: "Synthesizer",
+          status: "Batch processing complete.",
+          log: "[SYNTHESIZER] FODRIX CV Pipeline complete. Exported high-quality image dataset & metadata."
         }
       ]
     }
@@ -134,7 +135,7 @@
     if (!runBtn || !goalInput) return;
 
     presetBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         presetBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const presetKey = btn.getAttribute('data-preset');
@@ -154,7 +155,7 @@
       clearBtn.addEventListener('click', () => {
         const consoleEl = document.getElementById('agentConsoleOutput');
         if (consoleEl) {
-          consoleEl.innerHTML = `<code>[SYSTEM] Terminal logs cleared. Ready for next agent execution.</code>`;
+          consoleEl.innerHTML = `<code>[SYSTEM] Terminal logs cleared. Topology: Planner ➔ Research ➔ Critic ➔ Synthesizer.</code>`;
         }
       });
     }
@@ -185,7 +186,7 @@
     }
 
     const workflow = presets[presetKey] || presets.recruitment;
-    appendLog(`=== STARTING LANGGRAPH MULTI-AGENT STATE MACHINE ===`);
+    appendLog(`=== STARTING MULTI-AGENT STATE MACHINE ===`);
     appendLog(`MISSION: "${userGoal}"`);
 
     // Reset all nodes
