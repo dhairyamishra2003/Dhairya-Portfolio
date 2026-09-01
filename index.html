@@ -27,14 +27,66 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
   
   <!-- Three.js & OrbitControls for 3D Visuals -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" defer></script>
   
   <!-- Canvas Confetti for Celebration effects -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dhairya Mishra",
+    "url": "https://dhairyamishra.ai/",
+    "jobTitle": "AI Engineer & Generative AI Specialist",
+    "description": "AI Engineer specializing in production-grade Generative AI systems, autonomous multi-agent workflows, RAG pipelines, and LLM applications.",
+    "image": "https://dhairyamishra.ai/assets/dhairya.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/dhairya-mishra-",
+      "https://github.com/dhairyamishra2003"
+    ],
+    "email": "mailto:dhairyam698@gmail.com",
+    "telephone": "+91 6264516970",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Satna",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "IN"
+    },
+    "knowsAbout": [
+      "Generative AI",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "Multi-Agent Systems",
+      "LangGraph",
+      "Python",
+      "FastAPI",
+      "React",
+      "PostgreSQL"
+    ]
+  }
+  </script>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dhairya's AI Engineer Portfolio",
+    "description": "Portfolio showcasing production-grade GenAI systems including multi-agent research platforms and RAG-powered recruitment systems.",
+    "url": "https://dhairyamishra.ai/",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
   
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -66,14 +118,14 @@
       </a>
 
       <nav class="nav-links" id="navMenu" aria-label="Main Navigation">
-        <a href="#about" class="nav-link"><i data-lucide="user"></i> About</a>
-        <a href="#agent-lab" class="nav-link"><i data-lucide="cpu"></i> Agent Lab</a>
-        <a href="#projects" class="nav-link"><i data-lucide="folder-git-2"></i> Projects</a>
-        <a href="#skills" class="nav-link"><i data-lucide="layers"></i> Skills</a>
-        <a href="#experience" class="nav-link"><i data-lucide="briefcase"></i> Experience</a>
-        <a href="#research" class="nav-link"><i data-lucide="book-open"></i> Research</a>
-        <a href="#terminal-section" class="nav-link"><i data-lucide="terminal"></i> Terminal</a>
-        <a href="#contact" class="nav-link nav-link-cta"><i data-lucide="send"></i> Let's Connect</a>
+        <a href="#about" class="nav-link" title="About section"><i data-lucide="user"></i> About</a>
+        <a href="#agent-lab" class="nav-link" title="Agent Lab section"><i data-lucide="cpu"></i> Agent Lab</a>
+        <a href="#projects" class="nav-link" title="Projects section"><i data-lucide="folder-git-2"></i> Projects</a>
+        <a href="#skills" class="nav-link" title="Skills section"><i data-lucide="layers"></i> Skills</a>
+        <a href="#experience" class="nav-link" title="Experience section"><i data-lucide="briefcase"></i> Experience</a>
+        <a href="#research" class="nav-link" title="Research section"><i data-lucide="book-open"></i> Research</a>
+        <a href="#terminal-section" class="nav-link" title="Terminal section"><i data-lucide="terminal"></i> Terminal</a>
+        <a href="#contact" class="nav-link nav-link-cta" title="Contact section"><i data-lucide="send"></i> Let's Connect</a>
       </nav>
 
       <div class="nav-actions">
@@ -106,7 +158,7 @@
         <!-- Holographic 3D Portrait Avatar in Hero -->
         <div class="hero-avatar-wrapper">
           <div class="avatar-glow-ring">
-            <img src="assets/dhairya.jpg" alt="Dhairya Mishra - AI Engineer & Generative AI Specialist" class="hero-avatar-img" />
+            <img src="assets/dhairya.jpg" alt="Dhairya Mishra - AI Engineer & Generative AI Specialist" class="hero-avatar-img" loading="eager" />
           </div>
         </div>
 
@@ -124,42 +176,42 @@
         </p>
 
         <!-- Truthful & Verifiable Hero Statistics (4 Cards) -->
-        <div class="hero-metrics">
+        <div class="hero-metrics" role="region" aria-label="Key metrics">
           <div class="metric-card glass-panel">
-            <span class="metric-num">3+</span>
-            <span class="metric-label">AI Projects</span>
+            <span class="metric-num">3</span>
+            <span class="metric-label">Production AI Systems</span>
           </div>
           <div class="metric-card glass-panel">
-            <span class="metric-num">4</span>
-            <span class="metric-label">Agent Architecture Nodes</span>
+            <span class="metric-num">4-Stage</span>
+            <span class="metric-label">Agentic Workflow</span>
           </div>
           <div class="metric-card glass-panel">
             <span class="metric-num">8.37</span>
             <span class="metric-label">B.Tech CGPA</span>
           </div>
           <div class="metric-card glass-panel">
-            <span class="metric-num focus-metric">LLM + RAG + Agents</span>
-            <span class="metric-label">Core Focus</span>
+            <span class="metric-num focus-metric">GenAI Specialist</span>
+            <span class="metric-label">Professional Focus</span>
           </div>
         </div>
 
         <!-- Hero CTAs -->
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">
+          <a href="#projects" class="btn btn-primary" aria-label="View featured AI projects">
             <i data-lucide="layers"></i>
             <span>View Projects</span>
           </a>
-          <button class="btn btn-secondary open-resume-trigger" id="heroResumeBtn">
+          <button class="btn btn-secondary open-resume-trigger" id="heroResumeBtn" aria-label="View resume">
             <i data-lucide="file-text"></i>
             <span>View Resume</span>
           </button>
-          <a href="https://github.com/dhairyamishra2003" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+          <a href="https://github.com/dhairyamishra2003" target="_blank" rel="noopener noreferrer" class="btn btn-github" aria-label="GitHub repositories">
             <svg class="brand-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
             <span>GitHub</span>
           </a>
-          <a href="https://linkedin.com/in/dhairya-mishra-" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+          <a href="https://linkedin.com/in/dhairya-mishra-" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin" aria-label="LinkedIn profile">
             <svg class="brand-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.69 1.69 0 1 0-.02-3.38 1.69 1.69 0 0 0 .02 3.38m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
             </svg>
@@ -195,7 +247,7 @@
         <div class="section-header">
           <span class="section-tag"><i data-lucide="user-check"></i> Profile</span>
           <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-          <p class="section-desc">Engineering resilient, production-ready AI systems at the intersection of LLM agents, vector retrieval, and full-stack platforms.</p>
+          <p class="section-desc">AI Engineer specializing in production-grade Generative AI systems — architecting autonomous multi-agent workflows, RAG pipelines, and LLM applications using LangGraph, modern vector databases, and full-stack engineering.</p>
         </div>
 
         <div class="about-grid">
@@ -284,8 +336,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="cpu"></i> Technical Showcase</span>
-          <h2 class="section-title">Agent Lab — <span class="gradient-text">Multi-Agent Architecture</span></h2>
-          <p class="section-desc">Interactive demonstration of an autonomous multi-agent topology: <strong>User ➔ Planner Agent ➔ Research Agent ➔ Critic Agent ➔ Synthesizer</strong>.</p>
+          <h2 class="section-title">Agent Lab — <span class="gradient-text">Agentic AI Architecture</span></h2>
+          <p class="section-desc">Interactive demonstration of production-grade multi-agent topology using LangGraph principles: <strong>User ➔ Planner Agent ➔ Research Agent ➔ Critic Agent ➔ Synthesizer</strong>. This architecture powers autonomous task decomposition and validation workflows.</p>
         </div>
 
         <div class="agent-lab-wrapper glass-panel">
@@ -406,8 +458,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="cpu"></i> Verified Engineering Systems</span>
-          <h2 class="section-title">Featured <span class="gradient-text">AI Systems</span></h2>
-          <p class="section-desc">Production-grade AI architectures, autonomous multi-agent pipelines, RAG systems, and deep learning platforms.</p>
+          <h2 class="section-title">Featured <span class="gradient-text">GenAI Systems</span></h2>
+          <p class="section-desc">Production-grade Generative AI architectures: autonomous multi-agent research platforms, RAG-powered recruitment systems, and intelligent workflow automation built with LangGraph, LLM APIs, and vector databases.</p>
         </div>
 
         <div class="projects-grid">
@@ -637,7 +689,7 @@
         <div class="section-header">
           <span class="section-tag"><i data-lucide="layers"></i> Verified Toolset</span>
           <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
-          <p class="section-desc">Technologies and frameworks actively applied in production AI platforms, RAG pipelines, and full-stack engineering.</p>
+          <p class="section-desc">GenAI & AI engineering technologies: LLM orchestration (LangGraph, LangChain), vector databases (Qdrant), prompt engineering, agentic AI patterns, RAG systems, plus full-stack development (Python, FastAPI, React, PostgreSQL).</p>
         </div>
 
         <!-- Filter category tabs -->
@@ -767,8 +819,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="briefcase"></i> Work History</span>
-          <h2 class="section-title"><span class="gradient-text">Experience</span></h2>
-          <p class="section-desc">Practical machine learning industry experience applying deep learning and computer vision to automated workflows.</p>
+          <h2 class="section-title"><span class="gradient-text">Industry Experience</span></h2>
+          <p class="section-desc">Hands-on deep learning and computer vision engineering experience building production-grade AI systems — from CNN-based image processing to automated quality assessment pipelines.</p>
         </div>
 
         <div class="timeline">
@@ -812,8 +864,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="book-open"></i> Technical Exploration</span>
-          <h2 class="section-title">Research & <span class="gradient-text">Experiments</span></h2>
-          <p class="section-desc">Architectural research initiatives and experiments into multi-agent coordination, agent memory protocols, and autonomous task decomposition.</p>
+          <h2 class="section-title">Research & <span class="gradient-text">Multi-Agent AI</span></h2>
+          <p class="section-desc">Deep research into multi-agent collaboration systems, autonomous task decomposition, LangGraph patterns, and resilient agentic AI architectures for complex enterprise workflows.</p>
         </div>
 
         <div class="timeline">
@@ -995,8 +1047,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag"><i data-lucide="send"></i> Direct Connection</span>
-          <h2 class="section-title">Let's Build <span class="gradient-text">Intelligent Systems</span></h2>
-          <p class="section-desc">Open to AI Engineer, GenAI Engineer and software engineering opportunities.</p>
+          <h2 class="section-title">Let's Build <span class="gradient-text">Intelligent AI Systems</span></h2>
+          <p class="section-desc">I'm actively seeking AI Engineer, Generative AI Engineer, and full-stack AI roles. Let's discuss building scalable, production-grade generative AI applications.</p>
         </div>
 
         <div class="contact-grid">
@@ -1080,24 +1132,24 @@
             <h3><i data-lucide="message-circle"></i> Send a Direct Message</h3>
             <p>Send a message or inquiry directly to my inbox.</p>
 
-            <form id="contactForm" class="contact-form">
+            <form id="contactForm" class="contact-form" aria-label="Contact form">
               <div class="form-group">
-                <label for="contactName">Your Name / Organization</label>
-                <input type="text" id="contactName" name="name" placeholder="e.g. Sarah Connor (Tech Recruiter / Founder)" required />
+                <label for="contactName">Your Name / Organization <span aria-label="required">*</span></label>
+                <input type="text" id="contactName" name="name" placeholder="e.g. Sarah Connor (Tech Recruiter / Founder)" required aria-required="true" />
               </div>
 
               <div class="form-group">
-                <label for="contactEmail">Your Email</label>
-                <input type="email" id="contactEmail" name="email" placeholder="sarah@company.com" required />
+                <label for="contactEmail">Your Email <span aria-label="required">*</span></label>
+                <input type="email" id="contactEmail" name="email" placeholder="sarah@company.com" required aria-required="true" />
               </div>
 
               <div class="form-group">
-                <label for="contactSubject">Subject / Role Opportunity</label>
-                <input type="text" id="contactSubject" name="subject" placeholder="AI Engineer Role / LangGraph Collaboration" required />
+                <label for="contactSubject">Subject / Role Opportunity <span aria-label="required">*</span></label>
+                <input type="text" id="contactSubject" name="subject" placeholder="AI Engineer Role / LangGraph Collaboration" required aria-required="true" />
               </div>
 
               <div class="form-group">
-                <label for="contactMessage">Message</label>
+                <label for="contactMessage">Message <span aria-label="required">*</span></label>
                 <textarea id="contactMessage" name="message" rows="4" placeholder="Hi Dhairya, we reviewed your multi-agent architecture and would like to connect..." required></textarea>
               </div>
 
@@ -1257,9 +1309,9 @@
   </div>
 
   <!-- JavaScript Scripts -->
-  <script src="js/three-scene.js"></script>
-  <script src="js/agent-simulator.js"></script>
-  <script src="js/terminal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/three-scene.js" defer></script>
+  <script src="js/agent-simulator.js" defer></script>
+  <script src="js/terminal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
