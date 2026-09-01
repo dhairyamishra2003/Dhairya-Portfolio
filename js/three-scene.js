@@ -88,7 +88,7 @@
       emissive: 0x005577,
       wireframe: true,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.3,
     });
     coreMesh = new THREE.Mesh(coreGeo, coreMat);
     neuralGroup.add(coreMesh);
@@ -98,13 +98,13 @@
     const innerMat = new THREE.MeshBasicMaterial({
       color: 0x7928ca,
       transparent: true,
-      opacity: 0.45,
+      opacity: 0.2,
     });
     const innerGlow = new THREE.Mesh(innerGeo, innerMat);
     neuralGroup.add(innerGlow);
 
     // Outer Floating Particles (Neural Synapses)
-    const particleCount = 450;
+    const particleCount = 200;
     const particleGeo = new THREE.BufferGeometry();
     const particlePositions = new Float32Array(particleCount * 3);
     const particleColors = new Float32Array(particleCount * 3);
@@ -138,7 +138,7 @@
       size: 2.2,
       vertexColors: true,
       transparent: true,
-      opacity: 0.9,
+      opacity: 0.4,
       blending: THREE.AdditiveBlending
     });
 
@@ -149,12 +149,12 @@
     const lineMat = new THREE.LineBasicMaterial({
       color: 0x4facfe,
       transparent: true,
-      opacity: 0.25,
+      opacity: 0.1,
       blending: THREE.AdditiveBlending
     });
 
     const linePositions = [];
-    for (let i = 0; i < 70; i++) {
+    for (let i = 0; i < 30; i++) {
       const idx1 = Math.floor(Math.random() * particleCount);
       const idx2 = Math.floor(Math.random() * particleCount);
 
@@ -195,7 +195,7 @@
         color: role.color,
         side: THREE.DoubleSide,
         transparent: true,
-        opacity: 0.15
+        opacity: 0.08
       });
       const ringMesh = new THREE.Mesh(ringGeo, ringMat);
       ringMesh.rotation.x = Math.PI / 2 + (role.offset * 0.2);
