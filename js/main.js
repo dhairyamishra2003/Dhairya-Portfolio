@@ -3,6 +3,16 @@
  * Dhairya Mishra - AI Engineer Portfolio
  */
 
+// Import and initialize Three.js 3D visualization
+import { initializeThreeJS } from './three-scene.js';
+
+// Initialize 3D AI Core when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeThreeJS);
+} else {
+  initializeThreeJS();
+}
+
 // Global Web Audio Synthesizer (No external assets needed)
 window.PortfolioSound = (function () {
   let audioCtx = null;
