@@ -352,7 +352,36 @@ main {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+}
+.nav-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.nav-icon-btn:hover {
+  transform: translateY(-2px);
+}
+.nav-linkedin-btn:hover {
+  background: rgba(10, 102, 194, 0.2);
+  border-color: #0a66c2;
+  color: #0a66c2;
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.4);
+}
+.nav-github-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 .resume-btn {
   display: flex;
@@ -566,21 +595,64 @@ main {
 .btn-linkedin {
   background: #0a66c2;
   color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .btn-linkedin:hover {
   background: #0077b5;
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.4);
+  box-shadow: 0 6px 20px rgba(10, 102, 194, 0.45);
 }
 .btn-github {
   background: rgba(20, 22, 32, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #fff;
 }
 .btn-github:hover {
-  background: rgba(30, 34, 48, 0.9);
+  background: rgba(30, 34, 48, 0.95);
   border-color: #fff;
+  color: #fff;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+.brand-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+.brand-icon-xs {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.linkedin-color {
+  color: #0a66c2;
+}
+.github-color {
+  color: #f0f6fc;
+}
+.contact-icon.linkedin-icon-box {
+  background: rgba(10, 102, 194, 0.15);
+  border-color: rgba(10, 102, 194, 0.35);
+  color: #0a66c2;
+}
+.contact-icon.github-icon-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.footer-socials a.footer-linkedin:hover {
+  background: rgba(10, 102, 194, 0.25);
+  color: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.4);
+}
+.footer-socials a.footer-github:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 .btn-sm {
   padding: 8px 16px;
