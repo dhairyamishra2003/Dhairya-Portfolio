@@ -120,7 +120,6 @@
         <a href="#skills" class="nav-link" title="Skills section"><i data-lucide="layers"></i> Skills</a>
         <a href="#experience" class="nav-link" title="Experience section"><i data-lucide="briefcase"></i> Experience</a>
         <a href="#research" class="nav-link" title="Research section"><i data-lucide="book-open"></i> Research</a>
-        <a href="#terminal-section" class="nav-link" title="Terminal section"><i data-lucide="terminal"></i> Terminal</a>
         <a href="#contact" class="nav-link nav-link-cta" title="Contact section"><i data-lucide="send"></i> Let's Connect</a>
       </nav>
 
@@ -997,46 +996,7 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE DEVELOPER TERMINAL -->
-    <section id="terminal-section" class="section terminal-section-wrapper">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag"><i data-lucide="terminal"></i> Developer CLI</span>
-          <h2 class="section-title">Interactive <span class="gradient-text">AI Shell</span></h2>
-          <p class="section-desc">Query Dhairya's profile, inspect tech stack, review projects, or view resume directly via terminal commands.</p>
-        </div>
 
-        <div class="terminal-container glass-panel">
-          <div class="terminal-topbar">
-            <div class="terminal-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <span class="terminal-title">dhairya@ai-cluster:~ (bash)</span>
-            <div class="terminal-actions">
-              <button id="termHelpBtn" class="term-action-btn"><i data-lucide="help-circle"></i> help</button>
-              <button id="termClearBtn" class="term-action-btn"><i data-lucide="trash-2"></i> clear</button>
-            </div>
-          </div>
-
-          <div class="terminal-screen" id="terminalScreen">
-            <div class="term-line output-text">
-              Welcome to <strong>Dhairya Mishra's AI Terminal v2.5.0</strong> (x86_64-ai-cluster)
-            </div>
-            <div class="term-line output-text">
-              Type <span class="term-highlight">help</span> to view commands or try <span class="term-highlight">whoami</span>, <span class="term-highlight">role</span>, <span class="term-highlight">focus</span>, <span class="term-highlight">stack</span>, <span class="term-highlight">projects</span>, <span class="term-highlight">skills</span>, <span class="term-highlight">contact</span>, <span class="term-highlight">resume</span>.
-            </div>
-          </div>
-
-          <div class="terminal-input-row">
-            <span class="term-prompt">dhairya@ai-cluster:~$</span>
-            <input type="text" id="terminalInput" class="term-input" placeholder="Type a command (e.g. whoami, help, skills, resume)..." autofocus autocomplete="off" />
-            <button id="termSubmitBtn" class="btn btn-primary btn-sm" aria-label="Execute Command"><i data-lucide="corner-down-left"></i></button>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="section contact-section">
@@ -1306,7 +1266,5 @@
 
   <!-- JavaScript Scripts -->
   <script type="module" src="js/main.js"></script>
-  <script src="js/agent-simulator.js" defer></script>
-  <script src="js/terminal.js" defer></script>
 </body>
 </html>

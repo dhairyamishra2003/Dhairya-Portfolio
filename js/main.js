@@ -3,8 +3,9 @@
  * Dhairya Mishra - AI Engineer Portfolio
  */
 
-// Import and initialize Three.js 3D visualization
+// Import and initialize Three.js 3D visualization and agent simulator
 import { initializeThreeJS } from './three-scene.js';
+import './agent-simulator.js';
 
 // Initialize 3D AI Core when DOM is ready
 if (document.readyState === 'loading') {
